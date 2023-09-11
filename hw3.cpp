@@ -11,14 +11,24 @@ int sumList(vector<int> list){
     return sum;
 }
 
+int prodList(vector<int> list){
+    int product = list[0];
+    for(int i = 1;i < list.size();i++){
+        product = product * list[i];
+    }
+
+    return product;
+}
+
 int main(){
     vector<int> ls;
+    ls.push_back(2);
+    ls.push_back(2);
     ls.push_back(1);
-    ls.push_back(2);
-    ls.push_back(2);
 
     int s = sumList(ls);
-    cout << s;
+    int p = prodList(ls);
+    cout << p;
     return 0;
 }
 
