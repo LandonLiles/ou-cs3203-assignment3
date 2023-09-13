@@ -22,13 +22,20 @@ int prodList(vector<int> list){
 
 int main(){
     vector<int> ls;
-    ls.push_back(2);
-    ls.push_back(2);
-    ls.push_back(1);
-
+    int temp = 0;
+    
+    while(temp != -1){
+        cout << "enter a number, enter -1 to stop:";
+        cin >> temp;
+        if(temp != -1){
+            ls.push_back(temp);
+        }
+    }
+    
     int s = sumList(ls);
     int p = prodList(ls);
-    cout << p;
+    cout << "sum: " << s << endl;
+    cout << "product: " << p << endl;
     return 0;
 }
 
