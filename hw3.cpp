@@ -51,6 +51,9 @@ int main(){
 
     cout << "sum: " << s << endl;
     cout << "product: " << p << endl;
+    for(int i = 0;i < ct;i++){
+        cout << r[i] << " ";
+    }
     
     return 0;
 }
