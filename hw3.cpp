@@ -22,24 +22,41 @@ int prodList(vector<int> list){
     return product;
 }
 
+
+vector<int> revList(vector<int> list){
+    vector<int> fin;
+    int j = 0;
+
+    for(int i = list.size() - 1;i >= 0;i--){
+        fin.push_back(list[i]);
+    }
+
+    return fin;
+}
+
 // Main method
 int main(){
     vector<int> ls;
     int temp = 0;
+    int ct = 0;
     
     // Loop that inputs numbers into list, enter -1 to stop 
     while(temp != -1){
         cout << "enter a number, enter -1 to stop:";
         cin >> temp;
         if(temp != -1){
+            ct++;
             ls.push_back(temp);
         }
     }
     
     int s = sumList(ls);
     int p = prodList(ls);
+    vector<int> r = revList(ls);
+
     cout << "sum: " << s << endl;
     cout << "product: " << p << endl;
+    
     return 0;
 }
 
